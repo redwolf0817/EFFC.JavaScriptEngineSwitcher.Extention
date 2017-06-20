@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFFC.ChakraCore.DotNet", "EFFC.ChakraCore.DotNet\EFFC.ChakraCore.DotNet.csproj", "{4787F855-4379-406C-8F90-1BEA072D2F21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFFC.VRoomJs.DotNet", "EFFC.VRoomJs.DotNet\EFFC.VRoomJs.DotNet.csproj", "{81DFD0EF-7FA9-4D7B-9BD3-1C5B42ABFAC4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4787F855-4379-406C-8F90-1BEA072D2F21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4787F855-4379-406C-8F90-1BEA072D2F21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4787F855-4379-406C-8F90-1BEA072D2F21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4787F855-4379-406C-8F90-1BEA072D2F21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81DFD0EF-7FA9-4D7B-9BD3-1C5B42ABFAC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81DFD0EF-7FA9-4D7B-9BD3-1C5B42ABFAC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81DFD0EF-7FA9-4D7B-9BD3-1C5B42ABFAC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81DFD0EF-7FA9-4D7B-9BD3-1C5B42ABFAC4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
