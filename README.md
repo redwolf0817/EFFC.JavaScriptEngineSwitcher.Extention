@@ -6,40 +6,35 @@ EFFC.JavaScriptEngineSwitcher.Extention是在JavaScriptEngineSwitcher.Chakra和J
 
 # 使用说明
 因为是JavaScriptEngineSwitcher的框架，所以直接参考JavaScriptEngineSwitcher的相关说明即可，sample如下
-> using EFFC.ChakraCore;
+``` C#
+using EFFC.ChakraCore;
+using EFFC.VRoomJs;
 
-> using EFFC.VRoomJs;
+ ...
 
-> ...
+ JsEngineSwitcher engineSwitcher = JsEngineSwitcher.Instance;
 
-> JsEngineSwitcher engineSwitcher = JsEngineSwitcher.Instance;
+ engineSwitcher.EngineFactories
+                .AddEFFCChakraCore()
+               .AddEFFCVroom(new EFFCVroomSettings
+               {
+                  MaxYoungSpaceSize = 4194304,
+                  MaxOldSpaceSize = 8388608
+             });
 
-> engineSwitcher.EngineFactories
->                .AddEFFCChakraCore()
->                .AddEFFCVroom(new EFFCVroomSettings
->                {
+switch (name.ToLower())
+           {
 
->                    MaxYoungSpaceSize = 4194304,
->                    MaxOldSpaceSize = 8388608
+               case "chakra":
+                  engineSwitcher.DefaultEngineName = EFFCChakraCoreJsEngine.EngineName;
+                  break;
 
->               });
-
-> switch (name.ToLower())
->            {
-
->                case "chakra":
->                    engineSwitcher.DefaultEngineName = EFFCChakraCoreJsEngine.EngineName;
->                    break;
-
->                case "vroomjs":
->                    engineSwitcher.DefaultEngineName = EFFCVroomJsEngine.EngineName;
->                    break;
-
->                default:
->                    engineSwitcher.DefaultEngineName = EFFCChakraCoreJsEngine.EngineName;
->                    break;
-
->            }
-
->           js = engineSwitcher.CreateDefaultEngine();
-
+               case "vroomjs":
+                  engineSwitcher.DefaultEngineName = EFFCVroomJsEngine.EngineName;
+                    break;
+              default:
+                   engineSwitcher.DefaultEngineName = EFFCChakraCoreJsEngine.EngineName;
+                   break;
+          }
+          js = engineSwitcher.CreateDefaultEngine();
+```
