@@ -12,7 +12,8 @@
     <Description>E.F.F.C JavaScriptEngineSwitcher Extention Lib</Description>
     <Copyright>Copyright © ItTrending  2017</Copyright>
     <PackageReleaseNotes>Efficiency Focus For Core（效率、专注为核心）框架应用于.Net Core第一版发布
-本包围基础库包含EFFC框架的基础接口和基本资源API</PackageReleaseNotes>
+本包围基础库包含EFFC框架的基础接口和基本资源API
+1.0.2:更新JavascriptEngineSwitcher.Chakra到2.4.8</PackageReleaseNotes>
     <PackageTags>EFFC</PackageTags>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <SignAssembly>True</SignAssembly>
@@ -20,7 +21,7 @@
     <ApplicationIcon />
     <OutputTypeEx>library</OutputTypeEx>
     <StartupObject />
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
@@ -35,12 +36,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore" Version="2.4.5" />
-    <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore.Native.debian-x64" Version="2.4.5" />
-    <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore.Native.osx-x64" Version="2.4.5" />
-    <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore.Native.win-x64" Version="2.4.5" />
-    <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore.Native.win-x86" Version="2.4.5" />
-    <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore.Native.win8-arm" Version="2.4.5" />
+    <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore" Version="2.4.8" />
+    <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore.Native.debian-x64" Version="2.4.6" />
+    <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore.Native.osx-x64" Version="2.4.6" />
+    <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore.Native.win-x64" Version="2.4.6" />
+    <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore.Native.win-x86" Version="2.4.6" />
+    <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore.Native.win8-arm" Version="2.4.6" />
     <PackageReference Include="System.Runtime.Serialization.Formatters" Version="4.3.0" />
   </ItemGroup>
 

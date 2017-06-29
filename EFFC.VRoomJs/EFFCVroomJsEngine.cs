@@ -322,6 +322,7 @@ namespace EFFC.VRoomJs
             //added by chuan.yin in 2017/5/16
             var netobj = Convert2Object(CurrentContext, result);
             return TypeConverter.ConvertToType<T>(netobj);
+            
 		}
 
 		protected override void InnerSetVariableValue(string variableName, object value)
@@ -364,8 +365,40 @@ namespace EFFC.VRoomJs
 				}
 			}
 		}
+        public override void EmbedHostObject(string itemName, object value)
+        {
+            VerifyNotDisposed();
 
-		private void EmbedHostItem(string itemName, object value)
+            if (string.IsNullOrWhiteSpace(itemName))
+            {
+                throw new ArgumentException(
+                    string.Format(JavaScriptEngineSwitcher.Core.Resources.Strings.Common_ArgumentIsEmpty, "itemName"), "itemName");
+            }
+
+            if (!JavaScriptEngineSwitcher.Core.Helpers.ValidationHelpers.CheckNameFormat(itemName))
+            {
+                throw new FormatException(
+                    string.Format(JavaScriptEngineSwitcher.Core.Resources.Strings.Runtime_InvalidScriptItemNameFormat, itemName));
+            }
+
+            if (value != null)
+            {
+                Type itemType = value.GetType();
+
+                if (itemType == typeof(Undefined))
+                {
+                    throw new NotSupportedTypeException(
+                        string.Format(JavaScriptEngineSwitcher.Core.Resources.Strings.Runtime_EmbeddedHostObjectTypeNotSupported, itemName, itemType.FullName));
+                }
+            }
+            else
+            {
+                throw new ArgumentNullException("value", string.Format(JavaScriptEngineSwitcher.Core.Resources.Strings.Common_ArgumentIsNull, "value"));
+            }
+
+            InnerEmbedHostObject(itemName, value);
+        }
+        private void EmbedHostItem(string itemName, object value)
 		{
 			lock (_executionSynchronizer)
 			{
