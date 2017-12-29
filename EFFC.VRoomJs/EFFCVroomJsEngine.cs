@@ -473,9 +473,21 @@ namespace EFFC.VRoomJs
 
                 return dic;
             }
+            else if(obj is object[])
+            {
+                var jo = (object[])obj;
+                var list = new List<object>();
+                foreach(var item in jo)
+                {
+                    list.Add(Convert2Object(context,item));
+                }
+
+                return list.ToArray();
+            }
             else if (obj is DateTime)
             {
-                return ((DateTime)obj).ToLocalTime();
+                //不能转为本地时间
+                return ((DateTime)obj);
             }
             else if (obj is JsFunction)
             {

@@ -328,7 +328,7 @@ namespace EFFC.ChakraCore
                     result = processedValue.ToString();
                     break;
                 case JsValueType.Object:
-                    result = ToObject(value);
+                    result = ConvertJsObjectToNetObject(value);
                     break;
                 case JsValueType.Function:
                 case JsValueType.Error:
@@ -507,7 +507,13 @@ namespace EFFC.ChakraCore
                     }
                     else if (names.ValueType == JsValueType.Array)
                     {
-                        var arrIndex = ToArray(names);
+                        var arrIndex = ToArray(names).Select(p=>p.ToString()).ToArray();
+                        
+                        //charkra无法识别datetime类型，所以需要特殊处理
+                        if(arrIndex.Length==54 && arrIndex[0] == "Date")
+                        {
+                            throw new Exception("Chakra不支持Datetime类型");
+                        }
                         foreach (var key in arrIndex)
                         {
                             result.Add(key.ToString(), ConvertJsObjectToNetObject(value.GetProperty(key.ToString())));

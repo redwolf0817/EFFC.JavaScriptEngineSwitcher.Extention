@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFFC.ChakraCore", "EFFC.Cha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFFC.VRoomJs", "EFFC.VRoomJs\EFFC.VRoomJs.csproj", "{2A1451EE-9C19-42AD-86A9-35F4FE5DC49B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{5A1A9B78-0C90-4BBA-B69E-2C615733425D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2A1451EE-9C19-42AD-86A9-35F4FE5DC49B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A1451EE-9C19-42AD-86A9-35F4FE5DC49B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A1451EE-9C19-42AD-86A9-35F4FE5DC49B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A1A9B78-0C90-4BBA-B69E-2C615733425D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A1A9B78-0C90-4BBA-B69E-2C615733425D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A1A9B78-0C90-4BBA-B69E-2C615733425D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A1A9B78-0C90-4BBA-B69E-2C615733425D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

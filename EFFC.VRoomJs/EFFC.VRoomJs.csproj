@@ -9,14 +9,16 @@
     <Copyright>Copyright © ItTrending  2017</Copyright>
     <PackageTags>EFFC</PackageTags>
     <PackageReleaseNotes>Efficiency Focus For Core（效率、专注为核心）框架应用于.Net Core第一版发布
-本包围基础库包含EFFC框架的基础接口和基本资源API</PackageReleaseNotes>
+本包围基础库包含EFFC框架的基础接口和基本资源API
+1.0.3:修正获取数组类型的结果时，数据类型未被转化的问题
+1.0.4:修正获取DateTime时转化时间不正确的问题</PackageReleaseNotes>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>EFFC.VRoomJs.snk</AssemblyOriginatorKeyFile>
-    <Version>1.0.2</Version>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
-    <FileVersion>1.0.1.0</FileVersion>
+    <Version>1.0.4</Version>
+    <AssemblyVersion>1.0.4.0</AssemblyVersion>
+    <FileVersion>1.0.4.0</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
