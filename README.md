@@ -38,3 +38,11 @@ switch (name.ToLower())
           }
           js = engineSwitcher.CreateDefaultEngine();
 ```
+
+# 历史版本
+<ul>
+ <li>
+  1.0.2:更新JavascriptEngineSwitcher.Chakra到2.4.8</li>
+ <li>1.0.3:修正获取数组类型的结果时，数据类型未被转化的问题</li>
+ <li>1.0.4:更新JavascriptEngineSwitcher.Chakra到2.4.10，修正获取数据时遇到DateTime进入死循环的bug，改为直接抛出异常，目前chakra不支持js的Date转DateTime的能力</li>
+ </ul>
